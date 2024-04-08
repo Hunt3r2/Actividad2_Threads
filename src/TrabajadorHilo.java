@@ -1,24 +1,27 @@
+import java.util.Random;
 
 public class TrabajadorHilo extends Thread {
     private String nombre;
+    private Random rand = new Random();
 
     public TrabajadorHilo(String nombre) {
         this.nombre = nombre;
     }
 
     public static void main(String[] args) {
-        TrabajadorHilo hilo1 = new TrabajadorHilo("Juan");
-        TrabajadorHilo hilo2 = new TrabajadorHilo("María");
+        TrabajadorHilo trabajador1 = new TrabajadorHilo("Paquito2");
+        TrabajadorHilo trabajador2 = new TrabajadorHilo("Juanito");
 
-        hilo1.start();
-        hilo2.start();
+        trabajador1.start();
+        trabajador2.start();
     }
 	
 	public void run() {
 		for (int i = 0; i < 6; i++) {
             System.out.println("Estoy en el paso " + i + " - " + nombre);
             try {
-                Thread.sleep((long) (Math.random() * 1000));
+            	//hago que espere entre 1 y 1000 milisegundos, para eso uso un random combiando con un sleep.
+                Thread.sleep((rand.nextInt(1000) + 1));
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

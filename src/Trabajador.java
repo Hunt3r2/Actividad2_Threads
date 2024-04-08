@@ -5,8 +5,8 @@ public class Trabajador {
 
 
 	public static void main(String[] args) {
-		Trabajador trabajador1 = new Trabajador("Juan");
-        Trabajador trabajador2 = new Trabajador("María");
+		Trabajador trabajador1 = new Trabajador("Paquito");
+        Trabajador trabajador2 = new Trabajador("Juan");
 
         trabajador1.realizarTarea();
         trabajador2.realizarTarea();
