@@ -9,6 +9,7 @@ public class TrabajadorHilo extends Thread {
     }
 
     public static void main(String[] args) {
+    	//creo las dos instancias de los trabajadores 
         TrabajadorHilo trabajador1 = new TrabajadorHilo("Paquito2");
         TrabajadorHilo trabajador2 = new TrabajadorHilo("Juanito");
 
