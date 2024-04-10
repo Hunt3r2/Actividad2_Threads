@@ -8,15 +8,15 @@ public class ImpresoraNumeros {
 	}
 	
 	 private int numeroActual = 1;
-	 //syncronized sirve para que 
+	 //syncronized sirve para que solo un hilo pueda hacer esto a la vez
 	    public synchronized void imprimirNumero(boolean esPar) {
-	    	//si es par o si es impar
+	    	//si es par o si es impar que haga lo siguiente
 	        while ((esPar && getNumeroActual() % 2 == 0) || (!esPar && getNumeroActual() % 2 != 0)) {
 	            try {
 	            	//que espere al otro hilo
 	                wait();
 	            } catch (InterruptedException e) {
-	                Thread.currentThread().interrupt();
+	            	e.printStackTrace();
 	            }
 	        }
 	        

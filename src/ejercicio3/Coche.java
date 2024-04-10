@@ -49,7 +49,7 @@ public class Coche extends Thread{
                 }
                 System.out.println(nombre + " ha terminado de descansar. Continuando la carrera.");
                 distanciaDescanso += distanciaParcial;
-                //reinicio la distancia parcial para que no me salga que esta todo el rato 
+                //reinicio la distancia parcial para que no me salga que cada vez que se mueva, descanse
                 distanciaParcial = 0;
             }
         }
